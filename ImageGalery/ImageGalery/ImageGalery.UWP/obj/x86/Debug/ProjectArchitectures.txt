@@ -1,1 +1,0 @@
-C:\Users\ariel.l\source\repos\Ariellapin\XmrImageGalery\ImageGalery\ImageGalery\ImageGalery.UWP\ImageGalery.UWP.csproj;x86
