@@ -1,0 +1,104 @@
+﻿# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+x64/
+bld/
+[Bb]in/
+[Oo]bj/
+packages/
+/src/ImageGalery/[Ss]cripts/trading/
+/src/ImageGalery/[Ss]cripts/libs/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+
+# Roslyn cache directories
+*.ide/
+
+
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+*.dll
+*.lib
+*.sbr
+*.map
+*.orig
+*.nupkg
+bin/
+obj/
+**/packages/**/*.xml
+Binaries/
+*.sln.ide/
+/White Label Template/Publish/
+_Chutzpah.*.html
+
+#AjaxCommunicationToolkit
+!/WHL BO/WHLBO/Bin/AjaxControlToolkit.dll
+!/WHL BO/AffiliatesBO/Bin/AjaxControlToolkit.dll
+
+#Do not ignore anything under NuGet packages folder
+!**/packages/**/*.dll
+#Ignore XML files under NuGet packages folder
+**/packages/**/*.xml
+**/packages/**/*.XML
+#Allow unity dll
+!/Admin/BetManager/Unity/Microsoft.Practices.Unity.dll
+
+#Ignore mobile web.config and WHLClient web.config and admin
+/White Label Template/SBWHLMobileClient/web.config
+/White Label Template/WHLAdminTemplate/web.config
+/White Label Template/Packages.dgml
+/White Label Template/SBWHLTabletClient/web.config
+/Admin/packages
+*.orig
+/White Label Template/WHLClientTemplate/web.config
+/White Label Template/WHLAdminTemplate/web.config
+/White Label Template/SBWHLTabletClient/web.config
+/White Label Template/Packages.dgml
+White Label Template/packages/
+*sln.ide
+#Ignore StyleCopReport.xml
+StyleCopReport.xml
+/White Label Template/TestResults
+**/Binaries
+
+#Ignore CI artifacts
+!Tools/*
+/White Label Template/TestResults
+Binaries
+jasmine-result**
+/Admin/packages
+
+packages/
+
+!Lib/
+!Vendor/
+!/build/
+src/Publish/

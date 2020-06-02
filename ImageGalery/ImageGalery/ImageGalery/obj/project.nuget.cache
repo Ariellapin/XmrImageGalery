@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "jejC7kgFB7nugnJHalnwMewQfKNaxRz1naq4AteLLIJXbcZNhZTlssCn5Cvuz9Auz6YG9d81rXQImkWbNM3SvQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ariel.l\\source\\repos\\Ariellapin\\XmrImageGalery\\ImageGalery\\ImageGalery\\ImageGalery\\ImageGalery.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ariel.l\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\ariel.l\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\ariel.l\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\ariel.l\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\ariel.l\\.nuget\\packages\\xamarin.forms\\4.6.0.800\\xamarin.forms.4.6.0.800.nupkg.sha512",
+    "C:\\Users\\ariel.l\\.nuget\\packages\\xamarin.plugin.filepicker\\2.1.41\\xamarin.plugin.filepicker.2.1.41.nupkg.sha512"
+  ],
+  "logs": []
+}
