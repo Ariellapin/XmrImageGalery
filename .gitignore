@@ -15,6 +15,7 @@ bld/
 [Bb]in/
 [Oo]bj/
 packages/
+/packages/
 /src/ImageGalery/[Ss]cripts/trading/
 /src/ImageGalery/[Ss]cripts/libs/
 
