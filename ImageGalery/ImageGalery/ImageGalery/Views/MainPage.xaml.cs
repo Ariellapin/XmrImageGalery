@@ -20,17 +20,8 @@ namespace ImageGalery.Views
         {
             InitializeComponent();
             Title = "Main Page";
-            //Button toCommonPageBtn = new Button
-            //{
-            //    Text = "На обычную страницу",
-            //    HorizontalOptions = LayoutOptions.Center,
-            //    VerticalOptions = LayoutOptions.CenterAndExpand
-            //};
-            //toCommonPageBtn.Clicked += Button_Clicked;
-            //Content = new StackLayout { Children = { toCommonPageBtn } };
         }
         
-
         private async void Button_Clicked(object sender, EventArgs e)
         {
             try
@@ -38,23 +29,10 @@ namespace ImageGalery.Views
                 FileData fileData = await CrossFilePicker.Current.PickFile();
                 if (fileData == null)
                     return; // user canceled file picking
-
-                FileInfo fi = new FileInfo(fileData.FilePath);
-                //var files = fi.Directory.GetFiles("*.jpg", SearchOption.AllDirectories).Select(f=>new {date=f.LastWriteTime,name=f.Name });
-
-                imgMain.Source = ImageSource.FromFile(fileData.FilePath);
-                //btnChooseFile.IsVisible = false;
-                //var tapGestureRecognizer = new TapGestureRecognizer();
-                //tapGestureRecognizer.
-                //tapGestureRecognizer.Tapped += (s, ev) => {
-                //    // handle the tap
-                //};
-
-                //image.GestureRecognizers.Add(tapGestureRecognizer);
-
-
-                //Content = image;
-                //Console.WriteLine(files.Count());
+                
+                var img = GlobalVars.gallary.setImages(fileData.FilePath);
+                imgMain.Source = ImageSource.FromFile(img.path);
+               
             }
             catch (Exception ex)
             {
@@ -70,15 +48,19 @@ namespace ImageGalery.Views
             {
                 case SwipeDirection.Left:
                     // Handle the swipe
+                    imgMain.Source = ImageSource.FromFile(GlobalVars.gallary.Next().path);
                     break;
                 case SwipeDirection.Right:
+                    imgMain.Source = ImageSource.FromFile(GlobalVars.gallary.Next(-1).path);
                     // Handle the swipe
                     break;
                 case SwipeDirection.Up:
                     // Handle the swipe
+                    imgMain.Source = ImageSource.FromFile(GlobalVars.gallary.Next(100).path);
                     break;
                 case SwipeDirection.Down:
                     // Handle the swipe
+                    imgMain.Source = ImageSource.FromFile(GlobalVars.gallary.SetDelete().path);  
                     break;
             }
         }
@@ -151,6 +133,5 @@ namespace ImageGalery.Views
             }
         }
 
-        
     }
 }
