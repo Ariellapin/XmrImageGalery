@@ -1,5 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ImageGalery.Views.MainPage">
+
+    <StackLayout>
+
+        <Image x:Name="imgMain" Aspect="AspectFit" BackgroundColor="AliceBlue" 
+                   HorizontalOptions="FillAndExpand"
+                   VerticalOptions="FillAndExpand">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="OnImageTapped" NumberOfTapsRequired="1" />
+                <TapGestureRecognizer Tapped="OnImage2Tapped" NumberOfTapsRequired="2" />
+                <TapGestureRecognizer Tapped="OnImage3Tapped" NumberOfTapsRequired="3" />
+
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwipe" />
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwipe" />
+                <SwipeGestureRecognizer Direction="Up" Swiped="OnSwipe" />
+                <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipe" />
+
+                <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
+            </Image.GestureRecognizers>
+        </Image>
+        <Button x:Name="btnChooseFile" Clicked="Button_Clicked" Text="Choose file"></Button>
+    </StackLayout>
+</ContentPage>
+<!--<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,7 +36,8 @@
             x:Class="ImageGalery.Views.MainPage">
 
     <TabbedPage.Children>
-        <NavigationPage Title="Browse">
+
+        --><!--<NavigationPage Title="Browse">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
                     <On Platform="iOS" Value="tab_feed.png"/>
@@ -19,7 +48,6 @@
             </x:Arguments>
         </NavigationPage>
 
-        
         <NavigationPage Title="Images">
             <NavigationPage.Icon>
                 <OnPlatform x:TypeArguments="FileImageSource">
@@ -40,7 +68,7 @@
             <x:Arguments>
                 <views:AboutPage />
             </x:Arguments>
-        </NavigationPage>
+        </NavigationPage>--><!--
     </TabbedPage.Children>
     
-</TabbedPage>
+</TabbedPage>-->

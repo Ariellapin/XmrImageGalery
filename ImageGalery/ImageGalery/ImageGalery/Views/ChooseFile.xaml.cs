@@ -25,21 +25,7 @@ namespace ImageGalery.Views
 
         private async void OpenFile(object sender, EventArgs e)
         {
-            try
-            {
-                FileData fileData = await CrossFilePicker.Current.PickFile();
-                if (fileData == null)
-                    return; // user canceled file picking
-
-                FileInfo fi = new FileInfo(fileData.FilePath);
-                var files = fi.Directory.GetFiles("*.jpg", SearchOption.AllDirectories).Select(f=>new {date=f.LastWriteTime,name=f.Name });
-                Console.WriteLine(files.Count());
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Exception choosing file: " + ex.ToString());
-                await DisplayAlert("Alert", "Exception choosing file: " + ex.ToString(), "OK");
-            }
+            
         }
     }
 }

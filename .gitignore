@@ -14,13 +14,9 @@ x64/
 bld/
 [Bb]in/
 [Oo]bj/
-<<<<<<< HEAD
 packages/packages/
-ImageGalery/
-=======
 packages/
 /packages/
->>>>>>> 2d65f6ccab925d1ae43730a33e2d4e06816825b7
 /src/ImageGalery/[Ss]cripts/trading/
 /src/ImageGalery/[Ss]cripts/libs/
 
