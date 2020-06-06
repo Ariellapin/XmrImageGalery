@@ -65,9 +65,13 @@ namespace ImageGalery.Views
             }
         }
 
-        private void OnImageTapped(object sender, EventArgs e)
+        private async void OnImageTapped(object sender, EventArgs e)
         {
             btnChooseFile.Text = " 1 Tapped";
+            var answer = await DisplayAlert($"Delete", "Do you wan't to delete {} pictures ?", "Yes", "No");
+            int deleted = GlobalVars.gallary.Delete(answer);
+            if(deleted>0)
+                await DisplayAlert("Deleted", $"Deleted {deleted} pictures ?", "OK");
         }
 
         private void OnImage2Tapped(object sender, EventArgs e)

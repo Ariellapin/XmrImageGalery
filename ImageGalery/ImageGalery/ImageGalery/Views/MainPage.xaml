@@ -23,6 +23,7 @@
                 <SwipeGestureRecognizer Direction="Down" Swiped="OnSwipe" />
 
                 <PinchGestureRecognizer PinchUpdated="OnPinchUpdated" />
+                
             </Image.GestureRecognizers>
         </Image>
         <Button x:Name="btnChooseFile" Clicked="Button_Clicked" Text="Choose file"></Button>

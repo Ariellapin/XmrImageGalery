@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace ImageGalery.Extensions
 {
@@ -22,9 +23,15 @@ namespace ImageGalery.Extensions
             return pictures.FirstOrDefault();
         }
 
-        public int Delete() {
+        public int Delete(bool accept) {
             var delPic = pictures.Where(p => p.delete);
+            
+            if (accept)
+            {
+                delPic.ToList().ForEach( f => File.Delete(f.path));
+            }
             int deletedpict = delPic.Count();
+            pictures = pictures.Where(p => !p.delete);
             return deletedpict;
         }
         public Picture SetDelete() {
