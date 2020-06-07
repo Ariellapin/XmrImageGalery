@@ -27,7 +27,7 @@ namespace ImageGalery
         {
             AppCenter.Start("android=20a7dc53-c143-46d9-b72e-32c86a9891e6;" +
                   "uwp=20a7dc53-c143-46d9-b72e-32c86a9891e6;" +
-                  "ios=20a7dc53-c143-46d9-b72e-32c86a9891e6",
+                  "ios=ba51a33e-aaae-4c7c-8b29-9cc416cd0090",
                   typeof(Analytics), typeof(Crashes));
         }
 
